@@ -1,4 +1,4 @@
-class TodosController < ApplicationController
+class Api::V1::TodosController < Api::V1::ApiController
   before_action :set_todo, only: [:update, :destroy]
   
   def index
