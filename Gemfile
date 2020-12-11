@@ -27,6 +27,9 @@ gem 'active_model_serializers', '~> 0.10.10'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.5', require: false
 
+# Authentication
+gem 'devise'
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console'
