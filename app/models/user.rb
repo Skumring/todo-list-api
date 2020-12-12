@@ -1,7 +1,12 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable,
-         :recoverable, :validatable
+  include Devise::JWT::RevocationStrategies::Allowlist
+  
+  devise :database_authenticatable, :registerable, :recoverable, :validatable,
+          :jwt_authenticatable, jwt_revocation_strategy: self
          
+  # Associations
+  has_many :allowlisted_jwts, dependent: :destroy
+  
   # Field validations
   validates :name, presence: true, length: { in: 3..50 }
   

@@ -5,6 +5,10 @@ RSpec.describe User, type: :model do
     expect(FactoryBot.build(:user)).to be_valid
   end
   
+  context 'associations' do
+    it { should have_many(:allowlisted_jwts).dependent(:destroy) }
+  end
+  
   context 'validations' do
     subject { FactoryBot.build(:user) }
     
