@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       registrations: 'api/v1/registrations'
     }
   
-  namespace :api, shallow: true, constraints: { format: :json } do
+  namespace :api, shallow: true, defaults: { format: :json } do
     namespace :v1 do
       resources :todos
     end
