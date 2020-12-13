@@ -61,6 +61,9 @@ end
 group :test do
   # RSpec single line tests
   gem 'shoulda-matchers'
+  
+  # RSpec driven API testing framework
+  gem 'airborne'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
