@@ -7,6 +7,7 @@ RSpec.describe User, type: :model do
   
   context 'associations' do
     it { should have_many(:allowlisted_jwts).dependent(:destroy) }
+    it { should have_many(:own_todos).class_name('Todo').with_foreign_key('owner_id').dependent(:destroy) }
   end
   
   context 'validations' do
