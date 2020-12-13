@@ -6,5 +6,6 @@ class Todo < ApplicationRecord
   validates :owner, presence: true
   
   # Field validations
+  validates :completed, inclusion: { in: [true, false] }
   validates :title, presence: true
 end

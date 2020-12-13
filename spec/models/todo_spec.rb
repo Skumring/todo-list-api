@@ -17,6 +17,7 @@ RSpec.describe Todo, type: :model do
     end
     
     context 'fields' do
+      it { should validate_inclusion_of(:completed).in_array([true, false]) }
       it { should validate_presence_of(:title) }
     end
   end
