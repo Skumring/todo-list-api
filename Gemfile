@@ -27,6 +27,10 @@ gem 'active_model_serializers', '~> 0.10.10'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.5', require: false
 
+# Authentication
+gem 'devise'
+gem 'devise-jwt', '~> 0.7.0'
+
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console'
@@ -58,8 +62,8 @@ group :test do
   # RSpec single line tests
   gem 'shoulda-matchers'
   
-  # Template matcher
-  gem 'rails-controller-testing'
+  # RSpec driven API testing framework
+  gem 'airborne'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
