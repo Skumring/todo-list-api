@@ -10,7 +10,7 @@ gem 'rails', '6.0.3.4'
 gem 'pg'
 
 # Use Puma as the app server
-gem 'puma', '~> 5.1'
+gem 'puma', '~> 5.3'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
